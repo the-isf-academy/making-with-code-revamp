@@ -1,9 +1,18 @@
 ---
 title: 0. Pet Lab
-#draft: true
+draft: true
 ---
 
 # Pet Lab
+
+{{< devnote >}}
+- move checkpoint qs to form
+- change to VScode 
+- add nap() and play()
+- create a family of pets v. interface
+
+{{< /devnote >}}
+
 In this lab, you will learn about object oriented programming. You will create the backend of a pet simulator game.
 
 {{< expand "To learn more, visit the resources below" >}}
