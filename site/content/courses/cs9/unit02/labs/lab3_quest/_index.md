@@ -3,7 +3,7 @@ title: 3. Quest Lab
 resources:
 - name: Quest
   src: images/courses/cs9/unit02/02_02_quest_island.png
-#draft: True
+draft: True
 ---
 
 # Quest Lab
