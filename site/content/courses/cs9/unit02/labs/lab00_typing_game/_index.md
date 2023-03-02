@@ -26,15 +26,39 @@ In this lab, you will create a typing game! You will be re-introduced to the Ter
 ## [0] Setup
 
 {{< code-action "Download Visual Studio Code:" >}} [HERE](https://code.visualstudio.com/). Atom is no longer being developed, so we have decided to switch to VScode, one of the most popular code editors. 
-
-{{< code-action "Start by opening the Terminal cloning this lab onto your laptop." >}} As a reminder, we will run this command at the start of each lab.
+<!-- 
+{{< code-action "Check you have" >}} `mwc` installed. 
 ```shell
-mwc update
+mwc version
+``` 
+{{< code-action "If you do not see a version number, install it:" >}} 
+```shell
+pip3 install making-with-code-cli
 ```
 
-{{< code-action "In the Terminal, type the following command to open the lab folder." >}}
+{{< code-action "Now, update it and install the lab" >}} As a reminder, we will run this command at the start of each lab.
 ```shell
-cd ~/desktop/making_with_code/cs9/unit02_games/lab_typing_game
+mwc update
+``` -->
+
+{{< code-action "In the Terminal, open your" >}} `making_with_code/cs9` **folder:**
+```shell
+cd ~/desktop/making_with_code/cs9/
+```
+
+{{< code-action "Create a new folder for the unit:" >}}
+```shell
+mkdir unit02_games
+```
+
+{{< code-action "Clone your repository with starter code for the lab:" >}}
+> replace the `yourGithubUsername` with your Github username.
+>
+> *example: `git clone https://github.com/the-isf-academy/project_animation_emmaqbrown.git`*
+
+
+```shell
+git clone https://github.com/the-isf-academy/lab_typing_game_yourGithubUsername
 ```
 
 {{< aside "Windows Users" >}}
@@ -57,7 +81,7 @@ When you want to exit the shell, you can type `exit` or `^D`
 - `helpers.py.` - helper functions for the games
 
 {{< code-action "Open the folder in Visual Studio Code: " >}} `code .`
-
+> In the Terminal, We will use `code` now instead of `atom`
 --- 
 
 ## [1] Typing Game
