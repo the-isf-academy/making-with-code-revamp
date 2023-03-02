@@ -2,7 +2,7 @@
 title: 0. Typing Game
 type: lab
 slug: lab_typing_game
-repo_url: https://github.com/the-isf-academy/lab-terminal-adventure
+repo_url: https://github.com/the-isf-academy/lab_typing_game
 init_action: clone
 # numberHeaders: true
 # draft: true
@@ -151,7 +151,7 @@ Accuracy: 92.2%
 
 {{< deliverables  >}}
 
-**Once you've successfully completed the game be sure to fill out [this Google form](https://docs.google.com/forms/d/e/1FAIpQLScz0x6-s3GRD9P7oZlcqq24XifGDTw9BQ_j8t8TIqqRYw0naw/viewform?usp=sf_link)**.
+**Once you've successfully completed the game be sure to fill out [this Google form](https://docs.google.com/forms/d/e/1FAIpQLSdA6DntQ82dDg_WnYMzPcMO9kzPBoFP-G0hb9aydBIgNiL27Q/viewform?usp=sf_link)**.
 
 
 {{< code-action "Push your work to Github:" >}}
