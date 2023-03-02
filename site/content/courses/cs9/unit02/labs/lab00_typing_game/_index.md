@@ -61,6 +61,12 @@ mkdir unit02_games
 git clone https://github.com/the-isf-academy/lab_typing_game_yourGithubUsername
 ```
 
+{{< code-action >}} `cd` **into the lab**
+```shell
+cd lab_typing_game_yourGithubUsername
+```
+
+
 {{< aside "Windows Users" >}}
 
 I suggest not copying the path command, and instead using `cd` and `ls` to ensure you are in the correct `making_with_code` folder.
