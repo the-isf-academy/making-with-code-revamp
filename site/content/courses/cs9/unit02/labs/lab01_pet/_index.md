@@ -1,17 +1,24 @@
 ---
-title: 0. Pet Lab
-#draft: true
+title: 1. Pet Lab
+draft: true
 ---
 
 # Pet Lab
-In this lab, you will learn about object oriented programming. You will create the backend of a pet simulator game.
 
-{{< expand "To learn more, visit the resources below" >}}
+{{< devnote >}}
+- move checkpoint qs to form
+- change to VScode 
+- add nap() and play()
+- create a family of pets v. interface
+
+{{< /devnote >}}
+
+In this lab, you will learn about object oriented programming. You will create the backend of a pet simulator game.
 
 - Creating a Class: [12.5 Constructors](http://programarcadegames.com/index.php?chapter=introduction_to_classes&lang=en#section_12_5)
 - Inheritance: [12.6 Inheritance](http://programarcadegames.com/index.php?chapter=introduction_to_classes&lang=en#section_12_6)
 
-{{< /expand >}}
+---
 
 ## [0] Setup
 {{< code-action "Start by making a new folder in your" >}} `cs9` **folder.**
@@ -35,9 +42,9 @@ This lab includes the following files:
 
 ## [1] Creating your own pet
 
-In `pet.py` is a Python class that defines a `Pet`.
+In `pet.py` is a Python class that defines a `Pet` class. 
 
-{{< code-action >}} **First, let's run `pet.py` in the interactive Python shell.**
+{{< code-action >}} **First, let's run `pet.py` in the interactive Python shell.** This is a quicky way to test Python code.
 ```shell
 python3 -i pet.py
 ```
@@ -54,11 +61,19 @@ python3 -i pet.py
 >>> my_pet.set_name("Ajax")
 ```
 
+{{< code-action >}} **Check the name was stored in `my_pet`.**
+```shell
+>>> my_pet.name
+Ajax
+```
+
 {{< code-action "Have your pet introduce itself" >}}
 ```shell
 >>> my_pet.introduce()
 Hi, Im Ajax
 ```
+
+
 
 {{< code-action "Try out these other methods in the terminal." >}}
 ```shell
@@ -69,11 +84,12 @@ Hi, Im Ajax
 
 
 {{< checkpoint >}}
-In your notebook, answer the questions below before moving on.
+On the worksheet, answer the questions below before moving on.
 
 0. What happens if you try to get your pet to take two naps in a row?
 0. What happens if you play twice in a row without napping in between?
 0. Can you change the name after it's already set?
+0. Can you create 2 pets at the same time?
 
 {{< /checkpoint >}}
 
@@ -84,17 +100,36 @@ Your pet and its name will not be saved.
 
 ## [2] What type of animal is your pet?
 
-Now that you've used the `Pet` object, let's delve into the code and make our `Pet` more complex. People can have all different types of pets, so lets' add a `species` property to our `Pet`.
+Now that you've used the `Pet` class, let's delve into the code and make our `Pet` more complex. People can have all different types of pets, so lets' add a `species` property to our `Pet`.
 
-{{< code-action  >}} **Open `pet.py` in atom**
+{{< code-action  >}} **Open `pet.py` in VSCode**
 ```shell
-atom pet.py
+code pet.py
 ```
+
+---
+
+### [What's a class?]
+
+In the Python interactive shell, **you just successfully created and used an instance of a class!**
+
+{{< look-action >}} If you look in the Pet class, you can see on `line 1` - that we name the class `Pet`. **A class a simply a blueprint for group of data, or information, with specific functionalities.** In this class we are creating a blueprint for storing information about pets. Our pet will be able to talk, nap, and play.
+
+```python {linenos=table, hl_lines=["1"],linenostart=1}
+class Pet:
+    def __init__(self):
+        '''This initializes the pet with its properties.'''
+
+        self.name = None #The pet's name
+        self.tired = False #Tells us if the pet is tired
+        self.bored = True #Tells us if the pet is bored
+```
+
+---
 
 ### [Adding a new property]
 
-If you look in the Pet class, you can see on lines 5-7 that we have three properties. Properties are variables that belong to a specific class.
-
+{{< look-action >}} The information associated with a `Pet` is defined on `lines 5-7`. **Information associated with a class is called `property` and is stored in a variable.** Our pet has three properties. Properties are variables that only belong to a specific class.
 
 ```python {linenos=table, hl_lines=["5-7"],linenostart=1}
 class Pet:
@@ -108,7 +143,7 @@ class Pet:
 >The `Pet` currently 3 properties, `name`, `tired`, and `bored`.
 
 
-{{< code-action  >}} **Add a `species` property to the `Pet` class.** It will work just like the `name` property.
+{{< code-action  >}} **Add a `species` property to the `Pet` class that is initially set to `None`.** It will work just like the `name` property.
 
 ---
 
@@ -116,7 +151,7 @@ class Pet:
 
 Now that we've added the `species` property, we need to add a method to change the property.
 
-If you scroll down to lines 9-12, we see an example of a method. **A method is similar to a function. The only difference is that a method belongs to a certain class, like `Pet`.**
+{{< look-action >}} If you scroll down to lines 9-12, we see an example of a method. **A method is similar to a function. The only difference is that a method belongs to a certain class, like `Pet`.**
 
 
 ```python {linenos=table, linenostart=9}
@@ -179,12 +214,15 @@ def introduce(self):
 ## [2] What's wrong with my pet?
 
 Wouldn't it be nice if your pet could tell you whether it wanted to play or take a nap? Right now, the only way to know for sure is to print out the properties.
-
-If `tired` is `True`, then the pet needs a `nap()`. If `bored` is `True`, the pet wants to `play()`.
-
 Let's add a new method that allows the `Pet` to communicate.
 
 {{< code-action >}} **Add a new method called `status()`.** It should print out what the `Pet` currently needs.
+
+- If `tired` is `True`,
+    - then the pet needs a `nap()`
+- If `bored` is `True`
+    - then, the pet wants to `play()`
+
 > *Be sure consider the current state of the `tired` and `bored` property.*
 
 > ```shell
@@ -199,14 +237,19 @@ Let's add a new method that allows the `Pet` to communicate.
 
 ## [3] Deliverables
 
-{{< deliverables "Push to Github." >}}
 
-Push your `lab-pet` to Github.
+{{< deliverables  >}}
 
-In your notebook, answer the questions below before moving on to the extension.
+**Once you've successfully completed the game be sure to fill out [this Google form](https://docs.google.com/forms/d/e/1FAIpQLScz0x6-s3GRD9P7oZlcqq24XifGDTw9BQ_j8t8TIqqRYw0naw/viewform?usp=sf_link)**.
 
-0. How do you create a new `Pet` with the name "Peanut" that is a dog?
-0. What is the difference between a `property` and `method`?
+
+{{< code-action "Push your work to Github:" >}}
+- git status
+- git add file_name.py file_name2.py
+- git status
+- git commit -m "describe your drawing and your process here"
+  > be sure to customize this message, do not copy and paste this line
+- git push
 
 {{< /deliverables >}}
 
