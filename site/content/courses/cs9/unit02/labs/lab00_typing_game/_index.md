@@ -45,6 +45,11 @@ mwc update
 ```shell
 cd ~/desktop/making_with_code/cs9/
 ```
+{{< aside "Windows Users" >}}
+
+We suggest not copying the path command, and instead using `cd` and `ls` to ensure you are in the correct `making_with_code` folder.
+
+{{< /aside >}}
 
 {{< code-action "Create a new folder for the unit:" >}}
 ```shell
@@ -67,11 +72,6 @@ cd lab_typing_game_yourGithubUsername
 ```
 
 
-{{< aside "Windows Users" >}}
-
-I suggest not copying the path command, and instead using `cd` and `ls` to ensure you are in the correct `making_with_code` folder.
-
-{{< /aside >}}
 
 {{< code-action "Enter the Poetry Shell." >}} We will also run this command at the start of each lab, but only when we are inside a lab folder.
 ```shell
