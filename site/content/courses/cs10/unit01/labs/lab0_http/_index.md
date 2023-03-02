@@ -33,7 +33,7 @@ This time the mail delivery person is able to retrieve it from the business. You
 
 *Source: [https://www.codecademy.com/articles/http-requests](https://www.codecademy.com/articles/http-requests)*
 
-{{</expand>}}
+{{< /expand >}}
 
 {{< /aside >}}
 
@@ -42,10 +42,6 @@ This time the mail delivery person is able to retrieve it from the business. You
 - **HTTP** stands for "**Hypertext Transfer Protocol**." It's a set of rules for how
   computers ask each other for content, and how they reply. 
 - **JSON** stands for **JavaScript Object Notation**. It is the standard file format for exchanging data over the internet. The syntax mimics dictionaries by using `key` and `value` pairs. 
-<<<<<<< HEAD
-=======
-- ***API** stands for **Application Programming Interface**. It is software that allows computers to communicate with each other. An `API` often provides `JSON`. 
->>>>>>> cs9_unit00
 
 ---
 
@@ -124,12 +120,6 @@ Status codes are used to signal how the communication between the client and the
 - `404` means the resource requested could not be found 
 - `500` means, "Sorry, the server broke!" 
 
-<<<<<<< HEAD
-
-{{< checkpoint >}}
-
-Follow the instructions on the worksheet to before moving onto the next section. 
-=======
 ### [Using HTTPIE]
 
 With the new tool we installed on your computer, `httpie`, we can send HTTP `GET` requests from our terminal. 
@@ -149,7 +139,6 @@ http get https://cs.fablearn.org
 - Select "Network" from the top toolbar in the developer tools
 - Hard refresh the page with "Command + Shift + R"
 
->>>>>>> cs9_unit00
 
 {{< /checkpoint >}}
 
@@ -157,25 +146,6 @@ http get https://cs.fablearn.org
 
 ## [2] HKO
 
-<<<<<<< HEAD
-add example
-
-add 
-
-
-
-{{< checkpoint >}}
-
-Follow the instructions on the worksheet before moving onto the next section. 
-
-{{< /checkpoint >}}
-
-
-
-
-
-add deliverables
-=======
 You may have noticed that our site is pretty simple. That's because the data being sent is primarily text. **Our site is not hooked up to a database.**
 
 **We're now going to look at a website that utilizes a database, the [Hong Kong Observatory](https://www.hko.gov.hk/en/index.html).**
@@ -270,4 +240,3 @@ Now that you've had succifient practice accessing APIs, it's time to explore wha
 - [Joke API](https://sv443.net/jokeapi/v2/)
 - [ZenQuotes API](https://premium.zenquotes.io/zenquotes-documentation/)
 - [Wikipedia API](https://www.mediawiki.org/wiki/API:Main_page)
->>>>>>> cs9_unit00
