@@ -3,7 +3,7 @@ title: 0. Typing Game
 type: lab
 slug: lab_typing_game
 repo_url: https://github.com/the-isf-academy/lab_typing_game
-init_action: clone
+init_action: create_from_template 
 # numberHeaders: true
 # draft: true
 ---
