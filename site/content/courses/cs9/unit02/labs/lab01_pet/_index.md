@@ -1,6 +1,6 @@
 ---
 title: 1. Pet Lab
-draft: true
+# draft: true
 ---
 
 # Pet Lab
@@ -13,40 +13,52 @@ draft: true
 
 {{< /devnote >}}
 
-In this lab, you will learn about object oriented programming. You will create the backend of a pet simulator game.
+👀 **In this lab, you will learn about object oriented programming.** You will create the backend of a pet simulator game.
 
+📖 **A few helpful resources:**
 - Creating a Class: [12.5 Constructors](http://programarcadegames.com/index.php?chapter=introduction_to_classes&lang=en#section_12_5)
 - Inheritance: [12.6 Inheritance](http://programarcadegames.com/index.php?chapter=introduction_to_classes&lang=en#section_12_6)
 
 ---
 
 ## [0] Setup
-{{< code-action "Start by making a new folder in your" >}} `cs9` **folder.**
+{{< code-action "Start by going into your" >}} `cs9/unit02_games` **folder.**
 ```shell
-cd Desktop/cs9
-mkdir unit_02
-cd unit_02
+cd ~/desktop/cs9/unit_02
 ```
 
 {{< code-action "Then, clone your starter code." >}} Be sure to change `YOUR-GITHUB-USERNAME` to your actual Github username.
 ```shell
-git clone https://github.com/the-isf-academy/lab-pet-YOUR-GITHUB-USERNAME.git
+git clone https://github.com/the-isf-academy/lab_pet_yourgithubusername
 ```
 
 This lab includes the following files:
 - `pet.py`
-- `interface.py`
-> *`interface.py` is only required for the extension*
+- `test_pet.py`
+- `game_interface.py`
+- `helpers.py`
 
 ---
 
-## [1] Creating your own pet
+## [1] Testing your Pet
 
-In `pet.py` is a Python class that defines a `Pet` class. 
-
-{{< code-action >}} **First, let's run `pet.py` in the interactive Python shell.** This is a quicky way to test Python code.
+{{< code-action  >}} **Open the folder in VSCode**
 ```shell
-python3 -i pet.py
+code .
+```
+
+{{< look-action >}} **First, we will focus on `pet.py` and `test_pet.py`**
+- `pet.py` is the definition of a Python class for `Pet`
+- `test_pet.py` is simple file just for testing our `Pet`
+
+
+{{< code-action >}} **Let's start by running `test_pet.py`** 
+```shell
+python test_pet.py
+```
+```
+Peanut
+👋 Hi, I'm Peanut!
 ```
 
 {{< code-action >}} **Create a `Pet` by storing it in the variable `my_pet`**
@@ -120,9 +132,8 @@ class Pet:
     def __init__(self):
         '''This initializes the pet with its properties.'''
 
-        self.name = None #The pet's name
-        self.tired = False #Tells us if the pet is tired
-        self.bored = True #Tells us if the pet is bored
+        self.name = None        # holds the pet's name
+        self.bored = True       # holds the pet's bored level
 ```
 
 ---
@@ -136,11 +147,10 @@ class Pet:
     def __init__(self):
         '''This initializes the pet with its properties.'''
 
-        self.name = None #The pet's name
-        self.tired = False #Tells us if the pet is tired
-        self.bored = True #Tells us if the pet is bored
+        self.name = None        # holds the pet's name
+        self.bored = True       # holds the pet's bored level
 ```
->The `Pet` currently 3 properties, `name`, `tired`, and `bored`.
+>The `Pet` currently two properties, `name` and `bored`.
 
 
 {{< code-action  >}} **Add a `species` property to the `Pet` class that is initially set to `None`.** It will work just like the `name` property.
@@ -235,6 +245,38 @@ Let's add a new method that allows the `Pet` to communicate.
 
 ---
 
+## [3] Pet Simulator
+
+
+👾 **Now that you have experienced the backend of the `Pet`, let's play the game!** The `Pet` now has a nice Terminal interface where you can interact with it through a menu system, just like a lo-fi video game.
+```shell
+python game_interface.py
+```
+
+```shell
+-----------------------------------
+---- Welcome to Pet Simulator ----
+----------------------------------- 
+
+What would you like to name your pet?
+ > Peanut
+-------------------------
+Your pet is ready!
+-------------------------
+> Introduce                                                                                                                
+  Quit         
+```
+
+---
+
+### [play]
+
+{{< code-action >}} **Edit `game_interface.py` so you can `play()` with your `Pet`!**
+
+{{< code-action >}} **Play test it:** `python game_interface.py`
+
+---
+
 ## [3] Deliverables
 
 
@@ -257,24 +299,31 @@ Let's add a new method that allows the `Pet` to communicate.
 
 ## [3] Extension
 
-### [Upgrade the Interface]
+### [Add a hunger level]
 
-At this point, you have a working pet with multiple features! Now, let's develop the interface to make the `Pet` more like a video game.
+At this point, you have a working `Pet`, but it's pretty basic. Most pets, get hungry and need to eat. 
 
-{{< code-action >}} **First, run the following command in your terminal.** It will install a package for creating your own terminal menus.
+**This will require you to add a `hunger` property and `eat()` method.**
 
-```shell
-pip3 install simple-term-menu
-```
+**Your `hunger` property should:**
+- be an numerical data type
+- decreased when it plays 
+- increase when it uses `eat()`
 
-{{< code-action >}} **Next, run `interface.py`.** The `Pet` now has a nice Terminal interface where you can interact with it like a video game.
-
-However, currently all you can do it:
-- Create a `Pet`
-- Set its `name`ss
-- `play()` with it
+{{< code-action >}} **Test your edits with the `python shell`.**  
 
 
 {{< code-action >}} **Edit `interface.py` to include all of the features the `Pet` has.**
 
-{{< code-action >}} **Add any additional features to the `Pet` and the interface!**
+{{< code-action >}} **Play test it:** `python game_interface.py`
+
+---
+
+### [Tamagotchi Features]
+
+This lab was inspired by the Tamagotchi!
+
+{{< figure src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Tamagotchi_0124_ubt.jpeg/330px-Tamagotchi_0124_ubt.jpeg" width="40%" >}}
+
+{{< code-action >}} **Include as many of the original Tamagotchi features as you can!**
+- [Tamagotchi wiki](https://en.wikipedia.org/wiki/Tamagotchi)
