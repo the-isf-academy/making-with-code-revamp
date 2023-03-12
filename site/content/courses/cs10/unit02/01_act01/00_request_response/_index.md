@@ -35,12 +35,12 @@ the request/response lifecycle.
 {{< code-action >}} **Let's get started by making a `unit_02` folder and checking out the sample app.**
  
 ```shell
-cd Desktop/cs10
-mkdir unit_02
-cd unit_02
-git clone https://github.com/the-isf-academy/lab-colorama-YOUR-GITHUB-USERNAME.git
-cd lab-colorama
-pip install -r requirements.txt
+cd ~/desktop/making-with-code/cs10
+mkdir unit_web_apps
+cd unit_web_apps
+git clone https://github.com/the-isf-academy/lab_colorama_yourgithubusername
+cd lab_colorama_yourgithubusername
+poetry install
 ```
 
 {{< code-action >}} **Now have a look around using the `tree` command.** *If you don't have `tree` installed, you can skip this step.*
@@ -85,48 +85,46 @@ Let's see how the parts of the app worked together to show this page. When a
 request first arrives, its URL is separated into a host name and a path. In
 this case, the host name is `localhost:8000` and the path is `/`. 
 
-{{< code-action >}} **Open `colorama/urls.py`.** The file `colorama/urls.py` declares the app's routing, matching paths
+{{< code-action >}} **Open `mysite/urls.py`.** The file `mysite/urls.py` declares the app's routing, matching paths
 to views which should handle them. 
 
 ```python
 urlpatterns = [
-    path('/', include('colors_app.urls')),
-    path('starter_app/', include('starter_app.urls')),
+    path('/', include('color_app.urls')),
     path('admin/', admin.site.urls),
 ]
 ```
->This code is actually just importing URLs from other modules--`colors_app.urls`,
-`starter_app.urls`, and `admin.site.urls`.
+>This code is actually just importing URLs from other modules--`color_app.urls` and `admin.site.urls`.
 
-{{< code-action >}} **We're going to be working with `colors_app` today, so let's open `colors_app/urls.py`:**
+{{< code-action >}} **We're going to be working with `color_app` today, so let's open `color_app/urls.py`:**
 
 ```python {linenos=table, linenostart=4}
 from django.urls import path
-from colors_app import views
+from color_app import views
 
-app_name = "colors_app"
+app_name = "color_app"
 urlpatterns = [
     path('', views.home_view, name="index"),
-    path('colors/random', views.random_color_view, name="random_color"),
+    path('random/', views.random_color_view, name="random_color"),
 ]
 ```
 > Two views are defined. If you go to [the home page](http://localhost:8000) (empty path), 
 the request will be handled by `views.home_view`. And if you go to 
-[`/colors/random`](http://localhost:8000/colors/random), the request will be handled by
+[`random`](http://localhost:8000/random), the request will be handled by
 `views.random_color_view`.
 
-{{< code-action >}} **Let's look at these views. You can see that they are imported from `colors_app.views`, so we'll open `colors_app/views.py`.**
+{{< code-action >}} **Let's look at these views. You can see that they are imported from `color_app.views`, so we'll open `color_app/views.py`.**
 
 ```python {linenos=table, linenostart=8}
 def home_view(request):
     "A view function which renders the homepage"
-    log.info("In colors_app.views.home. Rendering the homepage.")
+    log.info("In color_app.views.home. Rendering the homepage.")
     skyblue = Color(name="skyblue", red=135, green=206, blue=250)
     params = {
         "name": "stranger",
         "color": skyblue,
     }
-    response = render(request, 'colors_app/index.html', params)
+    response = render(request, 'color_app/index.html', params)
     return response
 ```
 > The homepage view is just a simple function! It receives a `request`, builds a
@@ -136,7 +134,7 @@ def home_view(request):
 
 **Many views use
 *templates*, or pieces of HTML code that can be used to build a webpage.** The
-call to `render` on line 16 requests the template `colors_app/index.html`.
+call to `render` on line 16 requests the template `color_app/index.html`.
 (Every app in the project has a folder called `templates`; when you ask for a
 template, Django searches these folders for a match). 
 
@@ -149,9 +147,9 @@ template, Django searches these folders for a match).
   <div class="row">
     <div class="col text-center">
       <h1> Hello {{name}}</h1>
-      {% include "colors_app/swatch.html" %}
+      {% include "color_app/swatch.html" %}
       <p>
-        <a href="{% url 'colors_app:random_color' %}">
+        <a href="{% url 'color_app:random_color' %}">
           How about a random color?
         </a>
       </p>
@@ -164,30 +162,30 @@ HTML tags like `<h1>...</h1>` and template commands like `{% ... %}` and `{{ ...
 }}`. The HTML tags will be read by the client's browser as it presents the webpage; the template
 commands tell Django what to do. 
 - `extends` (line 1) means this template extends another template (in this
-  case, `base.html`, which you can find in `colorama/templates/base.html`.
+  case, `base.html`, which you can find in `mysite/templates/base.html`.
   Extending another template works by overriding particular *blocks*. Here, we
   are overriding the block called `content` (lines 3-15).
 - `{{name}}` (line 6) is a placeholder which will be replaced with the parameter called `name` given to the
-  template by the view (`colors_app/views.py`, lines 12-16). 
+  template by the view (`color_app/views.py`, lines 12-16). 
 - `include` (line 7) means include another template. Colorama needs to show
   color swatches all over the place, so we have a special template just for the
   color swatch circle. 
-- `url` (line 9) means look up a url by name (`colors_app/urls.py`, line 10). Why not
+- `url` (line 9) means look up a url by name (`color_app/urls.py`, line 10). Why not
   just type in the url? If you change it later, you might forget to fix it here,
   especially after you have a few dozen templates. And you might want to deploy
   this site to multiple hosts, like `localhost:8000` while you're developing it
   and `colorama.com` when you're ready to go public. 
 
 ### [Models]
-In addition to a template, `home_view` also uses a *model* called `Color` (`colors_app/views.py`, line 11). 
+In addition to a template, `home_view` also uses a *model* called `Color` (`color_app/views.py`, line 11). 
 **Think of views as connecters, and think of models as objects that do most of the work.**
 
 {{< code-action >}} **The `Color` model has some neat abilities; let's check them out by opening
-`colors_app/models.py`.**
+`color_app/models.py`.**
 
 ```python {linenos=table}
 from django.db import models
-from colors_app.validators import color_channel_validator
+from color_app.validators import color_channel_validator
 
 class Color(models.Model):
     name = models.CharField(max_length=50)
@@ -224,7 +222,7 @@ shortly.
 
 {{< write-action >}} **B.0:** When you go to the [home page](http://localhost:8000), it says "Hello
   stranger" at the top. However, if you look at the template 
-  `colors_app/templates/colors_app/index.html`, the word "stranger" does not
+  `color_app/templates/color_app/index.html`, the word "stranger" does not
   appear. **Explain how the word "stranger" ends up on the page.**
   
   > {{< code-action >}} **Then, without
@@ -236,7 +234,7 @@ shortly.
 {{< write-action >}} **B.2:** If you didn't already check it out, go to the [random color page](http://localhost:8000/colors/random).
   You'll notice that the color swatch changes every time you load the page, and 
   the background changes to an opposite color. **Explain how this works.** *(Hint:
-  We previously noticed that `/colors/random` is served by `colors_app.views.random_color_view`,
+  We previously noticed that `/color/random` is served by `color_app.views.random_color_view`,
   so start there. Figure out which template is being used. Look in the
   template to figure out how the background color gets set. Make sure you
   explain how the `Color` model is involved too.)*
@@ -249,21 +247,21 @@ shortly.
 **Now we're going to extend the app to let users create their own colors.** And
 whereas our views were previously functions, now our views are going to be classes. 
 Some class-based views are provided for you in
-`colors_app/class_based_views.py`. We need to do a little work to wire these in
+`color_app/class_based_views.py`. We need to do a little work to wire these in
 to the app. 
 
-{{< code-action >}} **Open `colors_app/urls.py` and add the highlighted lines:**
+{{< code-action >}} **Open `color_app/urls.py` and add the highlighted lines:**
 
 ```python {linenos=table, hl_lines=[3, 9, 10]}
 from django.urls import path
-from colors_app import views
-from colors_app.class_based_views import ColorListView, NewColorView
+from color_app import views
+from color_app.class_based_views import ColorListView, NewColorView
 
-app_name = "colors_app"
+app_name = "color_app"
 urlpatterns = [
     path('', views.home_view, name="index"),
-    path('colors/random', views.random_color_view, name="random_color"),
-    path('colors', ColorListView.as_view(), name="color_list"),
+    path('random/', views.random_color_view, name="random_color"),
+    path('colors/', ColorListView.as_view(), name="color_list"),
     path('colors/new', NewColorView.as_view(), name="new_color"),
 ]
 ```
@@ -275,26 +273,26 @@ you'll need to restart it (just run `python manage.py runserver` again).
 {{< code-action >}} **Now go to [`/colors`](http://localhost:8000/colors), and play around.** You can now add new colors and see a list of all the colors. If your app were live online, many users could all contribute colors. 
 
 Once again, let's have a look at the code that made this possible. We added two
-new URL routes, `colors` and `colors/new`, and routed them to `ColorListView`
+new URL routes, `colors` and `color/new`, and routed them to `ColorListView`
 and `NewColorView`, respectively. 
 
-{{< code-action >}} **Let's look in `colors_app/class_based_views.py`:**
+{{< code-action >}} **Let's look in `color_app/class_based_views.py`:**
 ```python
 from django.views.generic import DetailView, ListView, CreateView                                                      
 from django.urls import reverse_lazy                                                                                   
-from colors_app.models import Color                                                                                    
-from colors_app.forms import ColorForm                                                                                 
+from color_app.models import Color                                                                                    
+from color_app.forms import ColorForm                                                                                 
                                                                                                                        
 class ColorListView(ListView):                                                                                         
     model = Color                                                                                                      
-    template_name = "colors_app/color_list.html"                                                                       
+    template_name = "color_app/color_list.html"                                                                       
     queryset = Color.objects.order_by("name")                                                                          
                                                                                                                        
 class NewColorView(CreateView):                                                                                        
     model = Color                                                                                                      
     form_class = ColorForm                                                                                             
-    template_name = "colors_app/color_form.html"                                                                       
-    success_url = reverse_lazy("colors_app:color_list")    
+    template_name = "color_app/color_form.html"                                                                       
+    success_url = reverse_lazy("color_app:color_list")    
 ```
 *That's it???* 
 
