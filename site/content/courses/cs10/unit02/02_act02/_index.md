@@ -1,6 +1,6 @@
 ---
 Title: Act II
-# draft: true
+draft: true
 ---
 
 # Act II: Human Centered Design
