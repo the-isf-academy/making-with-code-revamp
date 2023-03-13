@@ -40,6 +40,11 @@ mkdir unit_web_apps
 cd unit_web_apps
 git clone https://github.com/the-isf-academy/lab_colorama_yourgithubusername
 cd lab_colorama_yourgithubusername
+```
+
+{{< code-action "Enter the poetry shell and install the required packages." >}}
+```shell
+poetry shell
 poetry install
 ```
 
