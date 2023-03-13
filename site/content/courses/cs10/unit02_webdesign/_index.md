@@ -137,7 +137,7 @@ The project is scored out of 7.
 **You have 4 in class days to complete this project.**
 
 - begins on Wednesday, 22 February 
-- due on Wednesday, 02 March
+- due on Thursday, 02 March
 
 ---
 

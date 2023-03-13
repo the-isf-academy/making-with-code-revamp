@@ -33,7 +33,7 @@ This time the mail delivery person is able to retrieve it from the business. You
 
 *Source: [https://www.codecademy.com/articles/http-requests](https://www.codecademy.com/articles/http-requests)*
 
-{{</expand>}}
+{{< /expand >}}
 
 {{< /aside >}}
 
