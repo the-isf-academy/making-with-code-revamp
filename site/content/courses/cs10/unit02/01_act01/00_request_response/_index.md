@@ -52,10 +52,7 @@ You'll meet some of these files today. For now, **the most important file to kno
 about is `manage.py`.** You'll always run this file when you want Django to do
 anything. 
 
-{{< code-action "To see a list of available commands, run:" >}} 
-```shell
-$ python3 manage.py help
-```
+
 ---
 ## A. Hello
 
@@ -63,8 +60,8 @@ $ python3 manage.py help
 prepares the database (more on this later); the second command starts the server
 running on port 8000 on your computer. 
 ```shell
-python3 manage.py migrate
-python3 manage.py runserver 8000
+python manage.py migrate
+python manage.py runserver 8000
 ```
 
 Now the server is waiting for requests. 
@@ -72,8 +69,7 @@ Now the server is waiting for requests.
 {{< code-action "Head over to your web browser and navigate to:" >}} [http://localhost:8000](http://localhost:8000). 
 
 {{< checkpoint >}}
-Each student should individually answer this question, and the questions later
-in this lab. 
+Complete the checkpoints questions on the worksheet as you move through the lab. 
 
 {{< write-action >}} **A.0:** What is the name of the color shown on the web page?
 
@@ -84,6 +80,8 @@ in this lab.
 Let's see how the parts of the app worked together to show this page. When a
 request first arrives, its URL is separated into a host name and a path. In
 this case, the host name is `localhost:8000` and the path is `/`. 
+
+{{< code-action >}} **Open the repository in VSCode:** `code .` 
 
 {{< code-action >}} **Open `mysite/urls.py`.** The file `mysite/urls.py` declares the app's routing, matching paths
 to views which should handle them. 
@@ -162,7 +160,7 @@ HTML tags like `<h1>...</h1>` and template commands like `{% ... %}` and `{{ ...
 }}`. The HTML tags will be read by the client's browser as it presents the webpage; the template
 commands tell Django what to do. 
 - `extends` (line 1) means this template extends another template (in this
-  case, `base.html`, which you can find in `mysite/templates/base.html`.
+  case, `base.html`, which you can find in `color_app/templates/base.html`.
   Extending another template works by overriding particular *blocks*. Here, we
   are overriding the block called `content` (lines 3-15).
 - `{{name}}` (line 6) is a placeholder which will be replaced with the parameter called `name` given to the
