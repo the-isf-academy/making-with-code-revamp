@@ -15,7 +15,12 @@ requests and responses.
 {{< code-action "Let's begin by starting the Colorama app in a Terminal window." >}} This lab picks up where [Part I](courses/cs10/unit_02/00_request_response/_index.md) left off.
 
 ```shell
-python3 manage.py runserver
+cd ~/desktop/making-with-code/cs10/unit_web_apps/lab_colorama_yourgithubusername
+```
+
+```shell
+poetry shell
+python manage.py runserver
 ```
 
 ## A. Django management commands
