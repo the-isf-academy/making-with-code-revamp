@@ -1,6 +1,6 @@
 ---
 title: 2. Runtime Lifecycle
-draft: true
+# draft: true
 ---
 
 # Django Runtime
@@ -52,7 +52,7 @@ with a chance to practice using some new management commands.**
 
 {{< code-action "Back up your app's database." >}}  
 ```shell
-python3 manage.py dumpdata > backup.json
+python manage.py dumpdata > backup.json
 ```
 > Note that the `>` redirects the output of a command into a file.
 >
@@ -73,7 +73,7 @@ previously created.*
 
 {{< code-action "Let's see what happened by starting to server." >}}  
 ```shell
-python3 manage.py runserver
+python manage.py runserver
 ```
 > [The homepage](http://localhost:8000) still works
 because its view doesn't access the database. But the [color list
@@ -82,7 +82,7 @@ page](http://localhost:8000/colors) crashes.
 
 {{< code-action "We can apply database migrations to re-initialize the database:" >}}  
 ```shell
-python3 manage.py migrate
+python manage.py migrate
 ```
 
 > Now you have a fresh clean database. The [color list page](http://localhost:8000/colors)
@@ -100,8 +100,8 @@ colors should be back.
 [all the colors listed on Wikipedia](https://en.wikipedia.org/wiki/Lists_of_colors).
 ```shell 
 rm colorama/db.sqlite3
-python3 manage.py migrate
-python3 manage.py loaddata wikipedia_colors.json
+python manage.py migrate
+python manage.py loaddata wikipedia_colors.json
 ```
 
 
