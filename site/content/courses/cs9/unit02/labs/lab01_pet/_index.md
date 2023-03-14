@@ -23,12 +23,19 @@ title: 1. Pet Lab
 ## [0] Setup
 {{< code-action "Start by going into your" >}} `cs9/unit02_games` **folder.**
 ```shell
-cd ~/desktop/cs9/unit_02
+cd ~/desktop/making_with_code/cs9/unit_02
 ```
 
 {{< code-action "Then, clone your starter code." >}} Be sure to change `YOUR-GITHUB-USERNAME` to your actual Github username.
 ```shell
 git clone https://github.com/the-isf-academy/lab_pet_yourgithubusername
+cd lab_pet_yourgithubusername
+```
+
+{{< code-action "Enter the Poetry shell and install the requirements:" >}}
+```shell
+poetry shell
+poetry install
 ```
 
 This lab includes the following files:
