@@ -254,7 +254,7 @@ copy-pasting.
 The highlighted lines of the code below show the changes you need to make!
 {{</ aside >}}
 
-{{< code-action "Add to the bottom of the settings file" >}} : `colorama/settings/base.py`
+{{< code-action "Add to the bottom of the settings file" >}} : `mysite/settings.py`
 ```python {linenos=table, hl_lines=["1-3"],linenostart=170}
 HUES_TO_SHOW = [-0.16, -0.08, 0, 0.08, 0.16]
 SATURATIONS_TO_SHOW = [-0.2, -0.1, 0, 0.1, 0.2]
