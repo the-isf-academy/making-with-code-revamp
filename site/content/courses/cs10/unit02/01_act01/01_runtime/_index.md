@@ -254,14 +254,14 @@ copy-pasting.
 The highlighted lines of the code below show the changes you need to make!
 {{</ aside >}}
 
-{{< code-action "Add to the bottom of the settings file" >}} : `colorama/settings/base.py`
+{{< code-action "Add to the bottom of the settings file" >}} : `mysite/settings.py`
 ```python {linenos=table, hl_lines=["1-3"],linenostart=170}
 HUES_TO_SHOW = [-0.16, -0.08, 0, 0.08, 0.16]
 SATURATIONS_TO_SHOW = [-0.2, -0.1, 0, 0.1, 0.2]
 VALUES_TO_SHOW = [-0.2, -0.1, 0, 0.1, 0.2]
 ```
 
-{{< code-action "Create a new file for the color detail template:" >}}  `colors_app/templates/colors_app/color_detail.html`
+{{< code-action "Create a new file for the color detail template:" >}}  `color_app/templates/color_app/color_detail.html`
 ```html {linenos=table, hl_lines=["1-25"]}
 {% extends "base.html" %}
 {% load static %}
@@ -282,31 +282,31 @@ VALUES_TO_SHOW = [-0.2, -0.1, 0, 0.1, 0.2]
   <div class="swatches">
     {% for color in hues %}
       <div class="swatch">
-        {% include "colors_app/swatch.html" %}
+        {% include "color_app/swatch.html" %}
       </div>      
     {% endfor %}
   </div>
-  <script src="{% static 'colors_app/offset_swatches.js' %}"></script>
+  <script src="{% static 'color_app/offset_swatches.js' %}"></script>
 {% endblock %}
 ```
 
-{{< code-action "Add links to thr color list template:" >}}  `colors_app/templates/colors_app/color_list.html`
+{{< code-action "Add links to thr color list template:" >}}  `color_app/templates/color_app/color_list.html`
 ```python {linenos=table, hl_lines=[2, 6],linenostart=17}
      {% for color in object_list %}
-       <a href="{% url 'colors_app:color_detail' color.id %}">
+       <a href="{% url 'color=_app:color_detail' color.id %}">
        <div class="swatch">
-         {% include "colors_app/swatch.html" %}
+         {% include "color_app/swatch.html" %}
        </div>  
        </a>
      {% endfor %}
 ```
 
-{{< code-action "Add a view to handle the color detail route:" >}}  `colors_app/class_based_views.py`:
+{{< code-action "Add a view to handle the color detail route:" >}}  `color_app/class_based_views.py`:
 ```python {linenos=table, hl_lines=[5, "18-36"]}
 from django.views.generic import DetailView, ListView, CreateView
 from django.urls import reverse_lazy
-from colors_app.models import Color
-from colors_app.forms import ColorForm
+from color_app.models import Color
+from color_app.forms import ColorForm
 from django.conf import settings
 
 class ColorListView(ListView):
@@ -322,7 +322,7 @@ class NewColorView(CreateView):
 
 class ColorDetailView(DetailView):
     model = Color
-    template_name = "colors_app/color_detail.html"
+    template_name = "color_app/color_detail.html"
       
     def get_context_data(self, *args, **kwargs):
         "Adds properties to the context dict sent to the template" 
@@ -341,11 +341,11 @@ class ColorDetailView(DetailView):
         return context
 ```
 
-{{< code-action "Add a URL route:" >}} `colors_app/urls.py`:
+{{< code-action "Add a URL route:" >}} `color_app/urls.py`:
 ```python {linenos=table, hl_lines=[3, 11]}
 from django.urls import path
-from colors_app import views
-from colors_app.class_based_views import NewColorView, ColorListView, ColorDetailView
+from color_app import views
+from color_app.class_based_views import NewColorView, ColorListView, ColorDetailView
 
 app_name = "colors_app"
 urlpatterns = [
@@ -363,7 +363,7 @@ urlpatterns = [
 
 {{< write-action "B.0" >}} Choose a color palette that you particularly like. What are the hex color values? 
 
-{{< write-action "B.1" >}}  Try changing `HUES_TO_SHOW` in `colorama/settings/base.py` to display a different number of hues or a different range of adjustment values. You should see the effects on the color detail pages. **What setting of `HUES_TO_SHOW` do you like best?**
+{{< write-action "B.1" >}}  Try changing `HUES_TO_SHOW` in `mysite/settings.py` to display a different number of hues or a different range of adjustment values. You should see the effects on the color detail pages. **What setting of `HUES_TO_SHOW` do you like best?**
 
 {{< write-action "B.2" >}}  We also defined settings for `SATURATIONS_TO_SHOW` and `VALUES_TO_SHOW`, but we're not showing palettes of saturations or values on the color detail
   pages. **Explain the changes you would need to make to show a palette of
