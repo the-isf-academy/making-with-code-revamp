@@ -146,7 +146,7 @@ There are lots of ethical questions that need to be considered when building an 
 
 ---
 
-## [2] Django Shell
+## [3] Django Shell
 
 **Now that we have some data in our database, let's see what we can do with it!** We can try out different methods using the python shell. 
 
@@ -198,7 +198,7 @@ python manage.py shell
 
 ---
 
-## [3] Changing the Model
+## [4] Changing the Model
 
 What if we decide we want to add more fields and methods to our `Riddle` model. It's possible with `makemigrations`. 
 
@@ -230,7 +230,7 @@ python manage.py runserver
 
 ---
 
-## [4] Deliverables 
+## [5] Deliverables 
 
 {{< deliverables >}}
 {{< code-action "Push your work to Github:" >}}
