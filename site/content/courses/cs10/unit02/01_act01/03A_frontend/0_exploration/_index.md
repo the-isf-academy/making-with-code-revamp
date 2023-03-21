@@ -12,7 +12,32 @@ During the track lessons you will be creating the web app for the ISF Riddler. Y
 ---
 
 
-## [0] Model
+## [0] Starter Code
+
+{{< code-action "Download your repository with starter code for your project." >}}
+
+```shell
+cd ~/desktop/making_with_code/cs10/unit_web_apps/
+git clone https://github.com/the-isf-academy/lab_riddler_frontend_yourgithubusername
+cd lab_riddler_frontend_yourgithubusername
+```
+
+{{< code-action "Install requirements" >}}
+```shell
+poetry install
+```
+
+{{< code-action "Enter the poetry shell." >}}
+```shell
+poetry shell
+```
+
+
+
+---
+
+
+## [1] Model
 
 {{< look-action >}} **You can find the `Riddle` model in `riddle_app/models.py`.** It can be helpful to know the architecture of the model so you know what are you are able to display in the frontend.
 
@@ -71,7 +96,7 @@ python manage.py runserver   `
 ---
 
 
-## [1] Explore Templates
+## [2] Explore Templates
 
 {{< code-action >}} **Open up the files with:** `code .`
 
@@ -84,12 +109,28 @@ python manage.py runserver   `
 
 --- 
 
-## [2] Add Bootstrap
+## [2] Customize CSS
 
-Bootstrap is a *massive* `CSS` framework library. It's easy to get lost in it. 
-
-It's up to you whether you'd like to incorporate it. 
+Bootstrap is a *massive* `CSS` framework library. It's easy to get lost in it. It's up to you whether you'd like to incorporate it. 
 
 {{< look-action >}} **Start by taking a look at what's available:** 
 - [bootstrap documentation](https://getbootstrap.com/docs/5.0/layout/containers/)
 - [bootstrap cheat sheet](https://getbootstrap.com/docs/5.0/examples/cheatsheet/)
+
+{{< code-action >}} **Customize the look of your site**
+- add `classes` and `ids` to the `html` and `css`
+- use variables in the `css` to more easily change color themes
+
+---
+
+## [5] Deliverables 
+
+{{< deliverables >}}
+{{< code-action "Push your work to Github:" >}}
+- `git status`
+- `git add -A`
+- `git status`
+- `git commit -m "your message goes here"`
+    - be sure to customize this message, do not copy and paste this line
+- `git push`
+{{< /deliverables >}}
