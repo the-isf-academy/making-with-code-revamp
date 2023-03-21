@@ -1,6 +1,6 @@
 ---
 title: 3.A.3 Django Templates
-# draft: True
+draft: True
 
 ---
 
