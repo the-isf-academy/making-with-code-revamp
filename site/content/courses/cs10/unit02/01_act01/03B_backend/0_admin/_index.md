@@ -105,9 +105,9 @@ from .models import Riddle
 admin.site.register(Riddle)
 ```
 
-{{< code-action >}} **We can now access the admin portal by going to: `http://127.0.0.1:8000/admin/`.**
+{{< code-action >}} **We can now access the admin portal by going to: [`127.0.0.1:8000/admin/`](http://127.0.0.1:8000/admin/).**
 
-If you go to this URL, there will be a webpage where we can log in to the admin site. We will need Superuser access for this.
+If you go to this URL, there will be a webpage where we can log in to the admin site. **We need Superuser access to log in.**
 
 ---
 
