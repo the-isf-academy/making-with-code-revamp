@@ -8,7 +8,32 @@ Title: "[Model, DB & Admin]"
 
 During the track lessons you will be creating a web app for the ISF Riddler. You should remember the Riddle database from the Networking Unit! 
 
-## [0] The Model
+---
+
+
+## [0] Starter Code
+
+{{< code-action "Download your repository with starter code for your project." >}}
+
+```shell
+cd ~/desktop/making_with_code/cs10/unit_web_apps/
+git clone https://github.com/the-isf-academy/lab_riddler_backend_yourgithubusername
+cd lab_riddler_backend_yourgithubusername
+```
+
+{{< code-action "Install requirements" >}}
+```shell
+poetry install
+```
+
+{{< code-action "Enter the poetry shell." >}}
+```shell
+poetry shell
+```
+
+---
+
+## [1] The Model
 
 {{< look-action >}}You can find the `Riddle` model in `riddle_app/models.py`.
 
@@ -67,7 +92,7 @@ python manage.py runserver   `
 ---
 
 
-## [1] Admin Portal
+## [2] Admin Portal
 
 Just like other parts of our app, the Administration page is a route that is configured in Django. With Django's default project setup, the panel is automatically enabled.
 
