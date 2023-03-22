@@ -103,6 +103,7 @@ python manage.py runserver   `
 {{< look-action >}} **Explore the `templates`  the**: `riddle_app/templates` directory 
 
 {{< code-action >}} **Open the different `html` files and follow the instructions in the comments.** The comments are denoted with a `<!-- 💻 -->`
+> You will need to reference the [Django template language documentation](https://docs.djangoproject.com/en/4.1/ref/templates/language/) to made the necessary additions. 
 ```html
 <!-- 💻 Add the Difficulty for the specific riddle -->
 ```
