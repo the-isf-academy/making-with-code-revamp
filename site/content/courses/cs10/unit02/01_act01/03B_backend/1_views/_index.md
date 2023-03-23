@@ -31,7 +31,9 @@ There are a TON of different ways to achieve the same outcome in Django. We will
 
 ### [TemplateView]
 
-**`TemplateView` is a view that simply directs the a `url path` to a `HTML` file.** Currently our `IndexView(TemplateView)`, which is viewable [HERE](http://127.0.0.1:8000/) does not have any information from the database.
+**`TemplateView` is a view that simply directs the a `url path` to a `HTML` file.** 
+
+{{< look-action >}} **Let's look at `IndexView(TemplateView)`.** You can view it [HERE](http://127.0.0.1:8000/).
 ```python
 class IndexView(TemplateView):
     template_name = "index.html"

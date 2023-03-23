@@ -107,6 +107,8 @@ python manage.py runserver   `
 ```html
 <!-- 💻 Add the Difficulty for the specific riddle -->
 ```
+> To display the `difficulty` field in the full label, you will need to reference [`get_FOO_display()` documentation](https://docs.djangoproject.com/en/4.1/ref/models/instances/#extra-instance-methods)
+
 
 --- 
 
@@ -122,9 +124,14 @@ Bootstrap is a *massive* `CSS` framework library. It's easy to get lost in it. I
 - add `classes` and `ids` to the `html` and `css`
 - use variables in the `css` to more easily change color themes
 
+💭 **Some ideas:**
+- display each riddle in `riddle_list.html` in a [card](https://getbootstrap.com/docs/5.0/components/card/)
+- add custom styling to the [form](https://blog.logrocket.com/how-to-style-forms-with-css-a-beginners-guide/) in `riddle_guess.html`
+- incorporate a [mobile friendly nav bar](https://getbootstrap.com/docs/5.0/components/navbar/)
+
 ---
 
-## [5] Deliverables 
+## [4] Deliverables 
 
 {{< deliverables >}}
 {{< code-action "Push your work to Github:" >}}
