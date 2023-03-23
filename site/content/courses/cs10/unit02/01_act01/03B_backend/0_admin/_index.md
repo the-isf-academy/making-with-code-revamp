@@ -180,7 +180,7 @@ python manage.py shell
 >>> first_riddle = Riddle.objects.first()
 >>> first_riddle.answer
 'A question of time'
->>> riddle.question
+>>> first_riddle.question
 'I’m the rare case when today comes before yesterday. What am I?'
 >>> first_riddle.likes
 47
