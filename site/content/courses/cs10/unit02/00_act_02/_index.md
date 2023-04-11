@@ -84,6 +84,7 @@ Your pitch should include:
     - We can plan with code readability in mind by using descriptive names 
 - **Pitch Presentation [3]**
     - We can present the Web App idea in a clear, engaging manner
+    - We can design slides that are readable and include appropriate visual aids 
     - We can appropriately respond to audience feedback   
 
 **For each criteria you will be assessed on a score from 0-3. With 9 criteria, there is a total of 9 potential points.** 
