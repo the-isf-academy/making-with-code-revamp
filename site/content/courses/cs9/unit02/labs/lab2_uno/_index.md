@@ -18,12 +18,6 @@ In this lab, you are going to go behind the scenes of the classic card game, Uno
 
 ---
 
-## [1] Setup
-
-Now that you've been reminded of how to play Uno,  let's delve into a Python implementation of it.
-
-{{< code-action >}} **In your `making_with_code/cs9/unit02_games` directory, clone the `lab-uno` repository inside it.**
-
 ## [0] Setup
 
 {{< code-action "Start by going into your" >}} `cs9/unit02_games` **folder.**
@@ -43,10 +37,15 @@ poetry shell
 poetry install
 ```
 
-This lab includes the following files to play the Spelling Bee game:
-- `spellingbee.py`
+This is the largest software package you have encountered and includes the following files:
+- `card.py`
+- `deck.py`
+- `player.py`
+- `uno.py`
 - `game.py`
 - `view.py`
+- `uno_cards.csv`
+- `test_lab.py`
 
 ---
 
@@ -64,41 +63,37 @@ python game.py
 🤔 Was the gameplay different than you expected? 
 
 
----
-
-### [Documentation]
-
-Uno is a pretty significant software project - there are more classes than you've seen before.
- 
-It's up to you, to finish the documentation of Uno.
-
----
 
 {{< checkpoint >}}
-In your group, complete the worksheet. 
+
+{{< code-action >}} **Open up the code:** `code .`
+
+{{< write-action >}} **In your group, complete the worksheet.**
+
 {{< /checkpoint >}}
-s
+
 
 ---
 
-## [3] Advanced Player the player 
+## [3] StrategicComputerPlayer 
 
 As you've experienced, you are playing against a computer. The `ComputerPlayer` has 3 main methods.
 - `get_playable_cards()`
 - `play_card()`
 - `choose_color()` 
 
-However, the current computer is not very intelligent. It doesn't always play a valid card on a wild and it always chooses 'red' if it plays a wild.
+However, the current computer is not very intelligent. 
   
 **Let's make a slightly more competitive computer by considering the best strategy for uno.** 
 
-It's up to you to extend the [`ComputerPlayer`](https://cs.fablearn.org/docs/uno/player.html#player.ComputerPlayer) class and complete the `StrategicComputerPlayer` class:
+It's up to you to extend the `ComputerPlayer` class and complete the `StrategicComputerPlayer` class:
 
-**You will need to override the following methods of `StrategicComputerPlayer` with the correct functionality:**
+**You will need to override the following methods of `StrategicComputerPlayer` to successfully write a better computer strategy:**
+- `get_playable_cards()`
 - `choose_color()`
-- `choose_card()`
+- `play_card()`
 
-**🤔 Your goal: write a strategic computer that consistently wins more than 30% of games against 2 other computer players who are using a random valid choice strategy.** Consider the rules and mechanics of Uno. Given a hand of cards, what would make playing one card better than playing another card? 
+**🤔 Your goal: write a strategic computer that consistently wins more than 38% of games against 2 other computer players who are using the basic strategy.** Consider the rules and mechanics of Uno. Given a hand of cards, what would make playing one card better than playing another card? 
 
 
 
@@ -114,13 +109,21 @@ python test_lab.py -k strategy
 
 ## [5] Deliverables
 
-{{< deliverables "Push to Github." >}}
+{{< deliverables  >}}
 
-For this lab, you should push your `lab-uno` repository containing updates to the following files:
-  - `game.py`
-  - `player.py`
+**Once you've successfully completed the game be sure to fill out [this Google form](https://docs.google.com/forms/d/e/1FAIpQLSeQKG6s2Z7LpDZHpKG3deH4IiPFg9Uoz8GcyYnN39fornqd3A/viewform?usp=sf_link)**.
+
+
+{{< code-action "Push your work to Github:" >}}
+- git status
+- git add -A
+- git status
+- git commit -m "describe your drawing and your process here"
+  > be sure to customize this message, do not copy and paste this line
+- git push
 
 {{< /deliverables >}}
+
 
 ---
 
@@ -129,6 +132,9 @@ For this lab, you should push your `lab-uno` repository containing updates to th
 
 Now that you've got a fully functional Uno game, let's expand its functionality. 
 
+It's up to you which extension to work on. If you have your own idea for extending Uno, feel free to work on that!
+
+---
 
 ### [Saying Uno]
 
