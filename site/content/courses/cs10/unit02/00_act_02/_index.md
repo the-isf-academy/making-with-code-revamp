@@ -115,7 +115,7 @@ The project is scored out of 7.
 
 {{< deliverables  "Milestone 1 is due on Thursday, 20 April." >}}
 
-- A Miro Board with your Web App design specificationss
+- A Miro Board with your Web App design specifications
 - A Google Slides presentation 
 
 ---
