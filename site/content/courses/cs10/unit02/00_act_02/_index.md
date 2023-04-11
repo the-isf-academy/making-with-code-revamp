@@ -7,10 +7,12 @@ slug: unit02_web_design
 
 # Act II: Web App Pitch 
 
-Act II focuses on planning and outlining a Web Application. We follow a human centered design cycle that focuses on ideating, defining, and designing. 
+Act II focuses on planning and outlining a Web Application. Your will need to consider aesthetics, user experience, and backend architecture in order to create a comprehensive plan.
+
+<!-- We follow a human centered design cycle that focuses on ideating, defining, and designing.  -->
 
 
-{{< youtube "wOrmr5kT-48" >}}
+<!-- {{< youtube "wOrmr5kT-48" >}} -->
 
 
 ## [0] Project Overview
@@ -57,13 +59,14 @@ For this project, you will use a Miro board to design the frontend and backend o
 
 ## [2] Pitch Presentation
 
-This milestone will conclude with a pitch presentation of your web app idea to your peers, teachers, and guests.
+You will take your polished wireframes and you great web app idea and present it to your peers, teachers, and guests. After your presentation, the audience should understand what your app does, what features it has, and who will use it when it's finished. This is a valuable opportunity to pitch your idea and receive feedback.
 
 {{< look-action >}} **You can find the slides template in your Google Drive.** Choose which of your team member's slides to use and notify a teacher.
 
 Your pitch should include: 
-- short description of your idea
-- images 
+- a short description of your idea
+- what features your app will have
+- images of your wireframes 
 
 ---
 
@@ -73,9 +76,9 @@ Your pitch should include:
 ✅  **This project will be assessed on the following criteria:**
 - **Frontend Design [3]**
     - We can appropriately plan the color palette and typography 
-    - We can design a high-fidelity wireframe for each necessary View
+    - We can design a high-fidelity wireframe for each necessary template
 - **Backend Design [3]**
-    - We can plan the architecture of my Model
+    - We can plan the architecture of a Django Model
         - appropriate field types 
         - helpful methods 
     - We can plan class-based and/or function-based Views
