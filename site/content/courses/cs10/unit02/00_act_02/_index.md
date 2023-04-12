@@ -77,14 +77,15 @@ Your pitch should include:
 - **Frontend Design [3]**
     - We can appropriately plan the color palette and typography 
     - We can design a high-fidelity wireframe for each necessary template
+    - We can display the appropriate information in the layout
 - **Backend Design [3]**
     - We can plan the architecture of a Django Model
-        - appropriate field types 
-        - helpful methods 
+        - All field types are appropriate
+        - Methods are used to improve efficiency and abstraction
     - We can plan class-based and/or function-based Views
-        - description of what the View will do 
-        - corresponding url path
-    - We can plan with code readability in mind by using descriptive names 
+        - Each View is described in detail
+        - Each View includes a corresponding url path
+    - We can use descriptive names to support readability 
 - **Pitch Presentation [3]**
     - We can present the Web App idea in a clear, engaging manner
     - We can design slides that are readable and include appropriate visual aids 
