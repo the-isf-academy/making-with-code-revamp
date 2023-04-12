@@ -104,6 +104,7 @@ It's up to you to extend the `ComputerPlayer` class and complete the `StrategicC
 ```shell
 python test_lab.py -k strategy
 ```
+> *if you receive a `raise NotImplementedError`, it is because you have not overridden `get_playable_cards()` AND `choose_color()`*
 
 ---
 
