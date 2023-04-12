@@ -3,7 +3,7 @@ Title: Act II
 draft: true
 ---
 
-# Act II: Human Centered Design
+# Act II: Web App Pitch 
 
 Act II focuses on planning and outlining a Web Application. We follow a human centered design cycle that focuses on ideating, defining, and designing. 
 
