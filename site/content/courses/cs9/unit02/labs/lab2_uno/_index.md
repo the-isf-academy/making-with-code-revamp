@@ -88,12 +88,12 @@ However, the current computer is not very intelligent.
 
 It's up to you to extend the `ComputerPlayer` class and complete the `StrategicComputerPlayer` class:
 
-**You will need to override the following methods of `StrategicComputerPlayer` to successfully write a better computer strategy:**
+**You will NEED to override the following methods of `StrategicComputerPlayer` to successfully write a better computer strategy:**
 - `get_playable_cards()`
 - `choose_color()`
-- `play_card()`
+> *a more advanced strategy will also override `play_card()`*
 
-**🤔 Your goal: write a strategic computer that consistently wins more than 38% of games against 2 other computer players who are using the basic strategy.** Consider the rules and mechanics of Uno. Given a hand of cards, what would make playing one card better than playing another card? 
+**🤔 Your goal: write a strategic computer that consistently wins more than 35-40% of games against 2 other computer players who are using the basic strategy.** Consider the rules and mechanics of Uno. Given a hand of cards, what would make playing one card better than playing another card? 
 
 
 
@@ -133,6 +133,19 @@ python test_lab.py -k strategy
 Now that you've got a fully functional Uno game, let's expand its functionality. 
 
 It's up to you which extension to work on. If you have your own idea for extending Uno, feel free to work on that!
+
+---
+
+### [More Advanced Strategy]
+
+Can you make your `StrategicComputerPlayer` even more advanced?  You'll need to override the `play_card()` method.
+
+{{< code-action >}} **Make an even more strategic player!** How high can you make the win percentage? It may be helpful to think through hou make the decision of which card to play at which time in the game. 
+
+{{< code-action >}} **Test your strategy by running:**
+```shell
+python test_lab.py -k strategy
+```
 
 ---
 
