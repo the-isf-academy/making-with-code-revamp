@@ -1,5 +1,5 @@
 ---
-title: 3. Story Lab
+title: 4. Story Lab
 resources:
 - name: Uno
   src: images/courses/cs9/unit02/02_01_uno.jpg
@@ -277,14 +277,15 @@ Take a look at this link. it's an outline of this story. You can follow it, or c
 ## [6] Extension:
 
 For your project, you will need to build out **one** additional feature to this `Story` framework. Here are a few suggested features:
-- a `Player` class
-  - unique branches depending on the type of character 
-  - hunger level
-  - health level 
 - looping stories with the ability to set an Node as a current Node's child 
+  - *e.g. player can go back to a previous area*
+- a `Player` class with unique properties 
+  - *e.g. hunger, money, health*
+- variable messaging in the story
+  - *e.g. `"you have visited this store 5 times"`*
 - a special `Node` child-class that gives items or status effects
-- variable messaging
-  - e.g. `"you have visited this store 5 times"`
+  - *e.g. a locked door where you need to first collect the key in a certain room.*
+
 
 {{< code-action >}} **Use this time to experiment with of these features! If you have your own ideas, feel free to experiment with that!**
 
