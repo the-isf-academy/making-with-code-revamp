@@ -16,15 +16,7 @@ In this lab, you are introduced to the structure for writing a branching story. 
 
 ---
 
-## [0] Choose your own Adventure
 
-👾 **Let's start by playing a couple of example choose your own adventure games.** As you play, consider the different genres and what's possible with this structure. 
-- [Harry Potter - Sorting Hat](https://unfold.studio/stories/303/)
-- [Oregon Trail 1971](https://unfold.studio/stories/10782/)
-- [City Exploration](https://unfold.studio/stories/2649/)
-- [Store front Example, variables](https://unfold.studio/stories/1065/)
-
----
 
 ## [0] Setup
 
@@ -257,7 +249,7 @@ Take a look at this link. it's an outline of this story. You can follow it, or c
 
 {{< deliverables  >}}
 
-**Once you've successfully completed the game be sure to fill out [this Google form](https://docs.google.com/forms/d/e/1FAIpQLSeQKG6s2Z7LpDZHpKG3deH4IiPFg9Uoz8GcyYnN39fornqd3A/viewform?usp=sf_link)**.
+**Once you've successfully completed the game be sure to fill out [this Google form](https://docs.google.com/forms/d/e/1FAIpQLSdt-1ot7m6E6rP01LmJTt9uvIrdOnLvfGw_Zhl5RFdkPN3XYg/viewform?usp=sf_link)**.
 
 
 {{< code-action "Push your work to Github:" >}}
@@ -289,3 +281,15 @@ For your project, you will need to build out **one** additional feature to this 
 
 {{< code-action >}} **Use this time to experiment with of these features! If you have your own ideas, feel free to experiment with that!**
 
+
+<!-- ---
+
+## [0] Choose your own Adventure
+
+👾 **Let's start by playing a couple of example choose your own adventure games.** As you play, consider the different genres and what's possible with this structure. 
+- [Harry Potter - Sorting Hat](https://unfold.studio/stories/303/)
+- [Oregon Trail 1971](https://unfold.studio/stories/10782/)
+- [City Exploration](https://unfold.studio/stories/2649/)
+- [Store front Example, variables](https://unfold.studio/stories/1065/)
+
+--- -->
