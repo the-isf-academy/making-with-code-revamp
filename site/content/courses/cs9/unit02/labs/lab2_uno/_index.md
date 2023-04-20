@@ -14,7 +14,7 @@ In this lab, you are going to go behind the scenes of the classic card game, Uno
 
 ## [0] Let's Play Uno
 
-🃏 **Let's start by playing the classic card game, Uno.** As your playing, consider the different components and mechanics of the game. 
+🃏 **Let's start by playing the classic card game, Uno.** As you're playing, consider the different components and mechanics of the game. 
 
 ---
 
@@ -22,7 +22,7 @@ In this lab, you are going to go behind the scenes of the classic card game, Uno
 
 {{< code-action "Start by going into your" >}} `cs9/unit02_games` **folder.**
 ```shell
-cd ~/desktop/making_with_code/cs9/unit_02
+cd ~/desktop/making_with_code/cs9/unit02_games
 ```
 
 {{< code-action "Clone your starter code." >}} Be sure to change `yourgithubusername` to your actual Github username.
