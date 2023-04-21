@@ -101,15 +101,6 @@ This repo includes the following files:
 
 
 
-- **Design Specifications [3]**
-    - I can brainstorm ideas by gathering inspiration from existing personal websites
-    - I can plan design specifications such as a wireframe, color palette, and fonts 
-    - I can update the design specifications overtime with a justification as to why changes were made
-- **Design Implementation [3]**
-    - I can write and adapt HTML and CSS to implement my design specification
-    - I can write a well structured site using HTML
-    - I can write well abstracted style rules using CSS 
-
 
 **For each criteria you will be assessed on a score from 0-3. With 9 criteria, there is a total of 9 potential points.** 
 - 0 - no evidence of the practice
