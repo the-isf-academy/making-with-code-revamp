@@ -7,7 +7,16 @@ Title: Project
 
 🎨 **Design Prompt:** You will create a text-based game inspired by a real piece of media or your own life. 
 
-{{< code-action >}} **You must add a new feature to the game.**
+{{< code-action >}} **Your game must include one unique feature.** For example:
+- variable messaging in the story associated with user actions
+    - *e.g. "you have visited this store 5 times"*
+- branches that come back together into the same Node
+- Nodes that can go back to a previous Node
+- a Player() class with unique properties
+    - *e.g. hunger, money, or health*
+- add to Node() and/or Story() to gives items
+    - *e.g. a locked door where you need to first collect the key in a certain room.*
+
 
 It is totally up to you what type of story you make. For example you could make:
 - choose your own adventure game 
@@ -119,7 +128,7 @@ The project is scored out of 15.
 
 ---
 
-## [4] Deliverables
+## [3] Deliverables
 
 {{< deliverables  "Projects are due on Wednesday, 02 March." >}}
 
@@ -156,7 +165,7 @@ The project is scored out of 15.
 
 ---
 
-## [Resources ]
+## [4] Resources
 
 
 👾 **If you need inspiration, explore these narrative games.** As you play, consider the different genres and what's possible with this structure. 
