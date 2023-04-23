@@ -7,11 +7,15 @@ Title: Project
 
 🎨 **Design Prompt:** You will create a text-based game inspired by a real piece of media or your own life. 
 
+{{< code-action >}} **You must add a new feature to the game.**
+
 It is totally up to you what type of story you make. For example you could make:
 - choose your own adventure game 
 - exploration game
 - puzzle game 
 - narrative story game
+
+
 
 {{< figure src="https://steamuserimages-a.akamaihd.net/ugc/1791848543425884907/18A8A93A2B7215E654F50350F4C896FFE463B456/" width="70%" >}}
 > [*Zork*](https://en.wikipedia.org/wiki/Zork) is often noted as one of the best video games of all time. 
