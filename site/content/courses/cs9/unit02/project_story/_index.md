@@ -7,11 +7,24 @@ Title: Project
 
 🎨 **Design Prompt:** You will create a text-based game inspired by a real piece of media or your own life. 
 
+{{< code-action >}} **Your game must include one unique feature.** For example:
+- variable messaging in the story associated with user actions
+    - *e.g. "you have visited this store 5 times"*
+- branches that come back together into the same Node
+- Nodes that can go back to a previous Node
+- a Player() class with unique properties
+    - *e.g. hunger, money, or health*
+- add to Node() and/or Story() to gives items
+    - *e.g. a locked door where you need to first collect the key in a certain room.*
+
+
 It is totally up to you what type of story you make. For example you could make:
 - choose your own adventure game 
 - exploration game
 - puzzle game 
 - narrative story game
+
+
 
 {{< figure src="https://steamuserimages-a.akamaihd.net/ugc/1791848543425884907/18A8A93A2B7215E654F50350F4C896FFE463B456/" width="70%" >}}
 > [*Zork*](https://en.wikipedia.org/wiki/Zork) is often noted as one of the best video games of all time. 
@@ -115,7 +128,7 @@ The project is scored out of 15.
 
 ---
 
-## [4] Deliverables
+## [3] Deliverables
 
 {{< deliverables  "Projects are due on Wednesday, 02 March." >}}
 
@@ -152,7 +165,7 @@ The project is scored out of 15.
 
 ---
 
-## [Resources ]
+## [4] Resources
 
 
 👾 **If you need inspiration, explore these narrative games.** As you play, consider the different genres and what's possible with this structure. 

@@ -234,7 +234,7 @@ End of Story
 
 Now that you've gotten a working `game.py`, let's build out the story. 
 
-Take a look at this link. it's an outline of this story. You can follow it, or come up with your own options! We'll share out at the end of class. 
+Come up with your own options to continue the story! We'll share out at the end of class. 
 
 {{< code-action >}} **"Continue the story, add at least 3 unique `Node()` objects.** Some ideas...
 - add additional lunch options in ISF A Block Cafeteria
