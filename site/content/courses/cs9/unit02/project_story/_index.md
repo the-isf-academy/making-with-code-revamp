@@ -187,3 +187,39 @@ The project is scored out of 15.
 - [Emojis](https://www.emojicopy.com/)
 - [InquirerPy](https://inquirerpy.readthedocs.io/en/latest/)
     - This is the package that controls the menu
+
+---
+
+🔉 **Play Sound.** If you are interested in including sounds in your game, follow along with these steps.
+
+(0) **Install the playsound library:** `poetry add playsound`
+
+(1) **Add a sound file to your repository.** *e.g. .mp3, .m4a, .wav file.*
+> If will have multiple sounds, be sure to consider how you will organize your repostiory.
+
+(2) **Incorporate the sound into your game.** If this is your feature, I highly planning how you will incorporate this into the `Node()`, `Story()` and/or `game.py`.
+
+```python
+from playsound import playsound
+
+playsound('test_sound.m4a')
+```
+
+---
+
+🌄 **Open Image.**  If you are interested in including images in your game, follow along with these steps. It will open the image in your computer's default image viewer *(e.g. Preview)*.
+
+(0) **Install the playsound library:** `poetry add pil`
+
+(1) **Add a image file to your repository.** *e.g. .png, .jpg file*
+> If will have multiple images, be sure to consider how you will organize your repostiory.
+
+(2) **Incorporate the image into your game.** If this is your feature, I highly planning how you will incorporate this into the `Node()`, `Story()` and/or `game.py`.
+
+
+```python
+from PIL import Image
+
+image1 = Image.open(r"test_img.png") 
+image1.show()
+```
