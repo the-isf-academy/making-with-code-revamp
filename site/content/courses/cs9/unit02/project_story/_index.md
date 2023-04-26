@@ -223,3 +223,35 @@ from PIL import Image
 image1 = Image.open(r"test_img.png") 
 image1.show()
 ```
+
+---
+
+🌄 **ASCII Art.**  ASCII Art is low-fi art that will print directly in the Terminal. For example...
+
+```
+ |\    o
+    |  \    o
+|\ /    .\ o
+| |       (
+|/ \     /
+    |  /
+     |/
+```
+
+💻 **The code for this looks like:**
+```python
+print("""\
+     |\    o
+    |  \    o
+|\ /    .\ o
+| |       (
+|/ \     /
+    |  /
+     |/
+""")
+```
+> *Note the `"""\` at the start and the `"""` and the end of the print statement*
+
+🌐 **Here are a few links to find and create your own ascii art.** Just be sure to site what you use in your `README.md`
+- [asciiart.eu/](https://www.asciiart.eu/)
+- [ascii art text](https://patorjk.com/software/taag/#p=display&f=Epic&t=Hello)
