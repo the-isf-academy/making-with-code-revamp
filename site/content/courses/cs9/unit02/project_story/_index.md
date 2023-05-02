@@ -192,7 +192,7 @@ The project is scored out of 15.
 
 🔉 **Play Sound.** If you are interested in including sounds in your game, follow along with these steps.
 
-(0) **Install the playsound library:** `poetry add playsound`
+(0) **Install the playsound library:** `pip3 install playsound`
 
 (1) **Add a sound file to your repository.** *e.g. .mp3, .m4a, .wav file.*
 > If will have multiple sounds, be sure to consider how you will organize your repostiory.
