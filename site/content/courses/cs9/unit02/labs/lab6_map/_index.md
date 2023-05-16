@@ -14,7 +14,12 @@ In this lab you explore the map making with [Tiled](https://doc.mapeditor.org/en
 
 ## [0] Setup
 
-{{< code-action >}} **First, download Tiled: [Mac OS ](https://drive.google.com/file/d/1UbyM-hp0IEe4ryz03N5qSaWJkhXb7rJs/view?usp=sharing) or [Windows OS - requires vpn](https://thorbjorn.itch.io/tiled/download/eyJleHBpcmVzIjoxNjg0MTM1MTMyLCJpZCI6Mjg3Njh9.Q%2bpKwG4sifdwcTmqeuAbCdodS%2b0%3d)**
+{{< code-action >}} **First, download Tiled: [Mac](https://drive.google.com/file/d/1UbyM-hp0IEe4ryz03N5qSaWJkhXb7rJs/view?usp=sharing) or [Windows - requires vpn](https://thorbjorn.itch.io/tiled/download/eyJleHBpcmVzIjoxNjg0MTM1MTMyLCJpZCI6Mjg3Njh9.Q%2bpKwG4sifdwcTmqeuAbCdodS%2b0%3d)**
+
+> For Mac
+>   - Download the `.zip` file 
+>   - Double click the file
+>   - Drag the `Tiled` app into your `Applications` folder
 
 {{< code-action "Then go into your" >}} `cs9/unit02_games` **folder.**
 ```shell
@@ -112,7 +117,7 @@ python game_platformer.py
 {{< code-action >}} **Save & Export your changes.**
 > If you do not *Export As*, you will not see your map changes when you play the game.
 0. Save: `command + s`
-0. Export As: `command + shift + e` 
+0. Export As: `command + shift + e` or `File > Export As`
     - Select `JSON map files (*.tmj *.json)`
 
 👾 **Play the game and test your changes:** `python game_platformer.py`. You should see the coins you added! If they do not disapear when your player collides with them, you most likely edited the incorrect map layer. 
@@ -124,7 +129,13 @@ python game_platformer.py
 - `Walls` - are tiles the player can stand on
 - `End` - are the tiles that end the game when the player collides them
 - `Background` - are tiles thare are decorative and have no player effects
+ 
+{{< aside "Export As!" >}}
+☑️ Don't forget to `Export As` every time you make edits to the map. 
 
+1. `command + shift + e` or `File > Export As`
+2. Save As Select `JSON map files (*.tmj *.json)`
+{{< /aside >}}
 
 👾 **We will play test each other's levels at the end of class!**
 > Feel free to edit `game_platformer.py` to experiment with map or game features. A few feature ideas: 
