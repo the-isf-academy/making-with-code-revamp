@@ -45,6 +45,10 @@ It is important for you to plan the game prior to coding.
 
 {{< write-action "Plan your game prior to coding in your Google Doc:" >}} Unit 02: Games  - Story Project Planning Document. Check with a teacher before moving on to the code.
 
+Some idea for features:
+- player health
+- adding enemies
+- 
 
 ---
 
