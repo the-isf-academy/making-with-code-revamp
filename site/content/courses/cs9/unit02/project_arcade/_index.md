@@ -45,7 +45,7 @@ cd ~/desktop/making_with_code/cs9/unit02_games
 
 {{< code-action "Clone your starter code." >}} Be sure to change `yourgroupname` to your actual Github username.
 ```shell
-git clone https://github.com/the-isf-academy/project_game_arcade_yourgroupname
+git clone https://github.com/the-isf-academy/project_games_arcade_yourgroupname
 ```
 
 {{< code-action "Enter the Poetry shell and install the requirements:" >}}
@@ -55,7 +55,7 @@ poetry install
 ```
 
 This repo includes the following files:
-- A `project-game-arcade` repository will include all the following files + any additional files:
+- A `project-games-arcade` repository will include all the following files + any additional files:
     - `game.py` 
     - `/assets.py`
         - `/map`
@@ -68,7 +68,7 @@ This repo includes the following files:
 
 {{< deliverables  "Projects are due on the last day of class!" >}}
 
-- A `project-game-arcade` repository will include all the following files + any additional files:
+- A `project-games-arcade` repository will include all the following files + any additional files:
     - `game.py` 
     - `/assets.py`
         - `/map`
