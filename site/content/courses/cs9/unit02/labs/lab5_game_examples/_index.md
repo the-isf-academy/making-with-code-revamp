@@ -74,6 +74,9 @@ python game_platformer.py
 python game_bullets.py 
 ```
 
+{{< figure src="images/courses/cs9/unit02/arcade01.png" width="400px" >}}
+
+
 {{< code-action >}} **Experiment with the settings!** A few things to try changing:
 - the bullet speed
 - the coin positions
@@ -92,7 +95,7 @@ python game_bullets.py
 **Once you've explored both games, fill out [this Google form](https://docs.google.com/forms/d/e/1FAIpQLSd5uRd-Ehmvu4x6LemzjVBFEIGiYmluTMxSPLDK6AruqbXMhg/viewform?usp=sf_link)**.
 
 - Which game are you more interested in exploring?
-- Are you interested in working in a group? If so, who would you like to work with?
+- Who would you like to work with in a group?
 
 
 {{< /deliverables >}}
