@@ -112,3 +112,39 @@ The project is scored out of 7.
 - due on Thursday, 20 April
 
 {{< /deliverables >}}
+
+## [3] Backing up your database
+
+In order to back up your database and push it to github, follow these steps:
+
+{{< code-action "Go to your repository:" >}}
+
+```shell
+cd ~/desktop/making_with_code/cs10/unit_web_apps/project_web_apps_YOURGROUPNAME
+```
+{{< code-action "Enter the poetry shell:" >}}  
+```shell
+poetry shell
+```
+{{< code-action "Back up your app's database." >}}  
+```shell
+python manage.py dumpdata > backup.json
+```
+{{< code-action "Push it to Github" >}}  
+```shell
+git add backup.json
+git status
+git commit -m "backing up database"
+git push
+```
+{{< deliverables  "You can stop here! Let your teacher know that your code is live, so that she can load the data on your live sit." >}}
+
+{{< /deliverables >}}
+
+
+{{< code-action "If you ever want to restore your data from a backup, you can run the following command:" >}}  
+```shell
+python3 manage.py loaddata backup.json
+```
+
+---
