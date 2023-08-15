@@ -1,7 +1,7 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "Making with Code"
-theme = ["book","mwc"]
+theme = ["book"]
 publishdir = "../build"
 
 [markup.goldmark.renderer]

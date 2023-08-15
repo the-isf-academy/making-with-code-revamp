@@ -9,7 +9,6 @@ title: Homepage
 
 *Making with Code* is a set of free, open-source computer science courses and
 related curriculum. More about what this actually is and how it can be used.
-the Transformative Learning Technologies Lab (TLTL) provides training.
 
 ### About us
 
